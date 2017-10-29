@@ -1,0 +1,25 @@
+<h1>Angular2-приложение</h1>
+<nav>
+    <ul>
+        <li routerLinkActive='activeLink' [routerLinkActiveOptions]="{exact:true}">
+            <a routerLink='/'>Главная</a>
+        </li>
+        <li routerLinkActive='activeLink'>
+            <a routerLink='/about'>О нас</a>
+        </li>
+        <li routerLinkActive='activeLink'>
+            <a routerLink='/hello-world'>Приветствие</a>
+        </li>
+        <li routerLinkActive='activeLink'>
+            <a [routerLink] = "['item', 'nokia']" [queryParams] = "{'price': 800, 'category': 'mobile'}">nokia</a>
+        </li>
+        <li routerLinkActive='activeLink'>
+            <a [routerLink] = "['item', 'sony']" [queryParams] = "{'price': 200, 'category': 'планшет'}">sony</a>
+        </li>
+    </ul>
+</nav>
+<input class="form-control" placeholder='Введите ID'/><br />
+<input class="form-control" placeholder='Введите цену'/><br />
+<input class="form-control" placeholder='Введите категорию'/><br />
+<button class="btn" (click) = 'test()'>Перейти</button>
+<router-outlet></router-outlet>
